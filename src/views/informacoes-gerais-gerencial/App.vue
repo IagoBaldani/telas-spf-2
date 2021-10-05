@@ -1,26 +1,26 @@
 <template>
   <Header />
   <main>
-    <section>
-      <div class="container">
-        <h2>Informações gerais</h2>
-        <div class="area-btns">
-          <a href="">
-            <div class="btn-container participante">Participante</div>
-          </a>
-          <a href="../Dados do Instrutor - Busca/index.html">
-            <div class="btn-container instrutor">Instrutor</div>
-          </a>
-          <a href="../Dados do Programa de Formação - Busca/index.html">
-            <div class="btn-container programaDeFormacao">
-              Programa <br />
-              de <br />
-              Formação
-            </div>
-          </a>
+      <section>
+        <div class="container-custom">
+          <h2>Informações gerais</h2>
+          <div class="area-btns">
+            <a href="">
+              <div class="btn-container participante">Participante</div>
+            </a>
+            <a href="../Dados do Instrutor - Busca/index.html">
+              <div class="btn-container instrutor">Instrutor</div>
+            </a>
+            <a href="../Dados do Programa de Formação - Busca/index.html">
+              <div class="btn-container programaDeFormacao">
+                Programa <br />
+                de <br />
+                Formação
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
 </template>
 
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style>
-.container {
+.container-custom {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -48,6 +48,7 @@ body {
 }
 
 h2 {
+  font-weight: bold;
   font-size: 22px;
   margin-bottom: 20px;
   color: #090b2e;
