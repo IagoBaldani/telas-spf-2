@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="https://vuejs.org/v2/api/#v-bind">
+    <head>
+        <meta charset='utf-8'>
+        <title>Busca por formação</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'>
+        <link rel='stylesheet' type='text/css' href='../assets/css/stylepadrao.css'>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+        <link rel="shortcut icon"  href="../assets/imgs/LOGO_SIS_2.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body onload="onLoad()">
+    <header>
+        <div class="header">
+            <a href="../Home - Painel gerencial/index.html"> <div class="home btn-header">
+                <img src="../assets/imgs/home_white_24dp.svg">
+            </div> </a>
+
+            <div class="logo">
+                <img src="../assets/imgs/LOGO_SIS_2.png">
+            </div>
+
+            <a href="javascript:history.back()"> <div class="rollback btn-header">
+                    <img src="../assets/imgs/arrow_back_white_24dp.svg">
+            </div> </a>
+        </div>
+    </header>
+        <main>
+            <div class="container-fluid">
+                <div class="row justify-content-evenly mt-4 mb-3">
+                    <div class="titulo col-xl-4">
+                        <h3 class="fw-bold">Busca por Formação:</h3>
+                    </div>
+                    <div class="col-xl-7 d-flex justify-content-center"> </div>
+                </div>
+                <div class="row justify-content-evenly" id="programas">
+                    <div class="col-xl-4">
+                        <form>
+                            <div class="mb-3">
+                                <input name="nome" type="text" class="form-control mt-4" placeholder="Nome" id="filtro-nome">
+                            </div>
+                           <div class="mb-3">
+                                <select class="form-select mt-4" id="filtro-status">
+                                    <option disabled selected value="0">Status</option>
+                                    <option value="1">Em andamento</option>
+                                    <option value="2">Encerrado</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="aviso">
+                            <h4 class="titulo fw-bold"> Não foi encontrado nenhum resultado com os parâmetros informados </h4>
+                            <button class="mt-3 form-control recarregar" onclick="recarregaLista()"> RECARREGAR LISTA</button> 
+                        </div>
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar" >
+                            <table class= "table table-bordered tabela mt-4 " id="tab">
+                                <tbody align="center">
+                                <tr class="programa" v-for="programa in programas">
+                                    <th scope="row" width="50">{{programa.id}}</th>
+                                    <td id="info-nome"> {{programa.nome}}</td>
+                                    <td>{{programa.turma}}</td>
+                                    <td id="info-status" class="info-status" v-bind:class="(programa.status == 'Encerrado')?'encerrado':'em-andamento'">{{programa.status}}</td>
+                                    <td class="imagem rounded" width="50">
+                                        <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html">
+                                            <img src="../assets/imgs/settings_white_24dp.svg" /> 
+                                        </a> 
+                                    </td> 
+                                    <td class="imagem-coluna rounded" width="50">
+                                        <a href="../Dados do Programa de Formação - Visualização/index.html">
+                                            <img src="../assets/imgs/school_white_24dp.svg">
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="col-xl-4">
+                        <button class="mt-5 form-control submit" onclick="filtraDados()">BUSCAR</button>
+                    </div>
+                    <div class="col-xl-7 justify-content-end d-flex">
+                        <a href="../Dados do Programa de Formação - Cadastro e Edição/index.html" class="mt-5 form-control cadastro d-flex justify-content-center"> NOVO CADASTRO </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="js/scriptget.js"></script>
+    <script src="js/scriptlista.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>

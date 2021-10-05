@@ -1,0 +1,106 @@
+/* Estilizações específicas da página */
+
+.titulo{
+    color: #090B2E;
+}
+
+.subtitulo{
+    color: #737373;
+}
+
+#disabledTextInput{
+    background-color: #D3CACA;
+    border: 1px solid #BCB3B3;
+}
+
+#formulario-principal{
+    text-align: left;
+}
+
+textarea{
+    resize: none !important;
+}
+
+.cadastro{
+    background-color: #FFB700 !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    max-width: 575px !important;
+
+}
+
+.status-encerrado{
+    color: darkred;
+    font-weight: bold;
+}
+
+.status-andamento{
+    color: green;
+    font-weight: bold;
+}
+
+.imagem{
+    background-color:  #AB0045 !important;
+  }
+  
+.imagem-coluna{
+    background-color: #FFB700 !important;
+}
+
+.my-custom-scrollbar{
+    position: relative;
+    height: 59vh;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+    height: 59vh;
+}
+
+.modal-body, .modal-header, .modal-footer {
+    text-align: center;
+    background-color: #EBEBEB
+}
+
+.modal-body{
+    min-height: 55vh;
+    flex-direction: column;
+}
+
+.submit-modal, .cancel-modal{
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    width: 350px;
+    font-size: 25px !important;
+}
+
+
+.submit, .submit-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #AB0045 !important;
+}
+
+.cancel, .cancel-modal{
+    color: white !important;
+    font-weight: bold !important;
+    background-color: #FFB700 !important;
+}
+
+.conteudomodal {
+    display: flex;
+    justify-content: center;
+    min-height: 40vh;
+    font-size: 21px;
+}
+
+.modal-content{
+    height: 80vh !important;
+}
+
+
+
+
