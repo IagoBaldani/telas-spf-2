@@ -1,4 +1,5 @@
 <template>
+<div>
     <Header/>
     <main>
         <div class="container-fluid">
@@ -69,6 +70,7 @@
             </div>
         </div>
     </main>
+  </div>
 </template>
 
 <script>
