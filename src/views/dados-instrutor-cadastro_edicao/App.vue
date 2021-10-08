@@ -12,12 +12,11 @@
             </div>
             <div class="row justify-content-evenly">
                 <div class="col-xl-4">
-                    <form>
                         <div class="mb-3">
-                            <label class="form-label fw-bold mb-0 titulo" for="inputName">Nome</label>
-                            <input class="form-control" 
+                            <label class="form-label fw-bold mb-0 titulo">Nome</label>
+                            <input class="form-control"
                                    required
-                                   placeholder="Nome" 
+                                   placeholder="Nome"
                                    type="text"
                                    v-model="modelNome"
                             />
@@ -31,13 +30,11 @@
                             <input class="form-control" id="inputCpf" required placeholder="xxx.xxx.xxx-xx" type="text" v-model="modelCpf"  />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label fw-bold mb-0 titulo" for="inputNotaLogica">Email
+                            <label class="form-label fw-bold mb-0 titulo">Email
                                 corporativo</label>
                             <input class="form-control" id="inputEmail" placeholder="seunome@sisconsultoria.com.br"
-                                type="email" required/>
+                                type="email" required v-model="modelEmail"/>
                         </div>
-                        <!--<div class="erro"> Todos os campos são obrigatórios </div>-->
-                    </form>
                 </div>
                 <div class="col-xl-4">
 
@@ -45,7 +42,7 @@
                 <div class="col-xl-2">
                     <form>
                         <div class=" text-center text-md-left">
-                          <!--  <img src="../assets/imgs/perfil.svg" class="rounded-circle" alt="" width="150px">-->
+                          <img src="@/assets/imgs/perfil.svg" class="rounded-circle" alt="">
                         </div>
                         <label for='selecao-arquivo'  class="editar btn submit form-control mt-4"> EDITAR </label>
                         <input class="input-arquivo" id="selecao-arquivo" type="file"/>
@@ -58,7 +55,6 @@
                         data-bs-target="#exampleModal" @click.prevent="enviarDados">
                         CONFIRMAR
                     </button>
-                    <!--<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">DESATIVAR PARTICIPANTE</button>-->
                 </div>
                 <div class="col-xl-4"></div>
                 <div class="col-xl-2"></div>
@@ -82,9 +78,10 @@
                     <div class="conteudomodal d-flex flex-column justify-content-center mb-0" id="instrutor-modal">
                         <div class="mt-3">
                             <ul class="fw-bold subtitulo text-start">Informações gerais:
-                                <li>Nome: {{ informacoes.nome }}</li>
-                                <li>Contato: {{ informacoes.contato }}</li>
-                                <li>CPF: {{ informacoes.cpf }}</li>
+                                <li>Nome: <span class="titulo"> {{ informacoes.nome }} </span> </li>
+                                <li>Contato: <span class="titulo"> {{ informacoes.contato }} </span></li>
+                                <li>CPF: <span class="titulo"> {{ informacoes.cpf }} </span></li>
+                              <li>Email: <span class="titulo"> {{ informacoes.email }} </span></li>
                             </ul>
                         </div>
                         </div>
@@ -112,11 +109,11 @@ export default {
   },
   data () {
     return {
-      instrutor: [{ id: '1', nome: 'Kaiqui Lopes', contato: '(11)99999-9999', cpf: '222.222.222-22', email: 'kaiquilopes@sisconsultoria.com.br' }],
       informacoes: {
         nome: '',
         cpf: '',
-        contato: ''
+        contato: '',
+        email: ''
       }
     }
   },
@@ -124,7 +121,8 @@ export default {
     enviarDados () {
       this.informacoes.nome = this.modelNome
       this.informacoes.contato = this.modelContato
-      this.informacoes.cpf = this.modelCpf 
+      this.informacoes.cpf = this.modelCpf
+      this.informacoes.email = this.modelEmail
     }
   }
 }
@@ -155,7 +153,7 @@ textarea{
 }
 
 .download{
-    transform: rotate(180) !important;
+    transform: rotate(180deg) !important;
 }
 
 .modal-body, .modal-header, .modal-footer {
@@ -191,7 +189,6 @@ textarea{
 .conteudomodal {
     display: flex;
     justify-content: center;
-    align-items: right;
     min-height: 40vh;
     font-size: 21px;
 }
@@ -207,6 +204,10 @@ textarea{
 .erro{
     color: darkred;
     font-weight: bold;
+}
+
+.rounded-circle{
+  width:150px;
 }
 
 @media (max-width: 1200px) {
