@@ -88,7 +88,7 @@
         <div class="col-xl-2">
           <fieldset disabled>
             <div class=" text-center text-md-left">
-              <img src="@/assets/imgs/profile.png" class="rounded-circle" alt="">
+              <img src="@/assets/imgs/perfil.svg" class="rounded-circle" alt="">
             </div>
           </fieldset>
         </div>

@@ -102,7 +102,7 @@
         <div class="col-xl-2">
           <form>
             <div class="text-center text-md-left">
-              <img src="@/assets/imgs/profile.png" class="rounded-circle" alt="">
+              <img src="@/assets/imgs/perfil.svg" class="rounded-circle" alt="">
             </div>
             <label for='selecao-arquivo'  class="editar btn submit form-control mt-4"> EDITAR </label>
             <input class="input-arquivo" id='selecao-arquivo' type='file' accept="image/*">
