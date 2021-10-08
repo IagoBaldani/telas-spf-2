@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-xl-4"></div>
                 <div class="col-xl-2 d-flex justify-content-center">
-                    <h2 class="titulo secundario"> Status: <span v-bind:class="(instrutor.status == 'Ativo')?'ativo':'inativo'"> {{instrutor.status}} </span></h2> 
+                    <h2 class="titulo secundario"> Status: <span v-bind:class="(instrutor.status == 'Ativo')?'ativo':'inativo'"> {{instrutor.status}} </span></h2>
                 </div>
             </div>
             <fieldset disabled>
@@ -40,7 +40,7 @@
                     <div class="col-xl-2">
                         <form>
                             <div class=" text-center text-md-left">
-                               <!-- <img src="../assets/imgs/perfil.svg" class="rounded-circle" alt="" width="150px">-->
+                               <img src="@/assets/imgs/perfil.svg" class="rounded-circle" alt="">
                             </div>
                         </form>
                     </div>
@@ -98,10 +98,14 @@ export default {
   components: {
     Header
   },
-  data () { 
+  data () {
     return {
       instrutor: {
-        nome: 'Kaiqui Lopes', contato: '(11)99999-9999', cpf: '222.222.222-22', email: 'kaiquilopes@sisconsultoria.com.br', status: 'Ativo'
+        nome: 'Kaiqui Lopes',
+        contato: '(11)99999-9999',
+        cpf: '222.222.222-22',
+        email: 'kaiquilopes@sisconsultoria.com.br',
+        status: 'Ativo'
       }
     }
   }
@@ -155,7 +159,7 @@ body{
 }
 
 .aprovado::placeholder{
-    color: #19B200 !important; 
+    color: #19B200 !important;
 }
 
 textarea{
@@ -163,7 +167,7 @@ textarea{
 }
 
 .download{
-    transform: rotate(180) !important;
+    transform: rotate(180deg) !important;
 }
 
 #disabledTextInput{
@@ -206,6 +210,10 @@ textarea{
     justify-content: center;
     align-items: center;
     min-height: 40vh;
+}
+
+.rounded-circle{
+  width:150px;
 }
 
 </style>
