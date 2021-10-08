@@ -3,7 +3,7 @@
     <main>
         <!-- ínicio do formulário -->
         <div class="container-fluid" id="instrutor">
-            <div class="row mt-5 justify-content-evenly">
+            <div class="row mt-4 justify-content-evenly">
                 <div class="div-titulo col-xl-4">
                     <h3 class="fw-bold titulo">Dados do instrutor: </h3>
                 </div>

@@ -4,7 +4,7 @@
     <section>
       <div class="container">
         <div class="area-btns">
-          <a href="">
+          <a href="/informacoes-gerais-gerencial">
             <div class="btn-container">
               <div class="icon-btn-container info">
                 <img src="@/assets/imgs/account_box_white_24dp.svg" />
