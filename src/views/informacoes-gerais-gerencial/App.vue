@@ -5,13 +5,13 @@
         <div class="container-custom">
           <h2>Informações gerais</h2>
           <div class="area-btns">
-            <a href="">
+            <a href="/dados-participante-busca">
               <div class="btn-container participante">Participante</div>
             </a>
-            <a href="../Dados do Instrutor - Busca/index.html">
+            <a href="/dados-instrutor-busca">
               <div class="btn-container instrutor">Instrutor</div>
             </a>
-            <a href="../Dados do Programa de Formação - Busca/index.html">
+            <a href="/dados-programa-busca">
               <div class="btn-container programaDeFormacao">
                 Programa <br />
                 de <br />
