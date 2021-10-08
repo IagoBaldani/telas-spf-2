@@ -35,7 +35,7 @@
               </h4>
               <button
                 class="mt-3 form-control recarregar"
-                onclick="recarregaLista()"
+                @click="recarregaLista"
               >
                 RECARREGAR LISTA
               </button>
@@ -43,7 +43,7 @@
             <div class="table-wrapper-scroll-y my-custom-scrollbar">
               <table class="table table-bordered tabela mt-4">
                 <tbody align="center">
-                  <tr v-for="instrutor in instrutores" :key="instrutor">
+                  <tr id="instrutor" v-for="instrutor in instrutores" :key="instrutor">
                     <th scope="row" width="50">{{ instrutor.id }}</th>
                     <td id="info-nome">{{ instrutor.nome }}</td>
                     <td
@@ -65,7 +65,7 @@
                       </a>
                     </td>
                     <td class="imagem-coluna rounded" width="50">
-                      <a href="../Dados do Instrutor - Visualização/index.html">
+                      <a href="/dados-instrutor-visualizacao">
                         <img
                           src="@/assets/imgs/account_circle_white_24dp.svg"
                         />
@@ -85,7 +85,7 @@
           </div>
           <div class="col-xl-7 justify-content-end d-flex">
             <a
-              href="../Dados do Instrutor - Cadastro e Edição/index.html"
+              href="/dados-instrutor-cadastro_edicao"
               class="mt-5 form-control cadastro d-flex justify-content-center"
             >
               NOVO CADASTRO
@@ -215,6 +215,7 @@ export default {
       var contador = 0
       let aviso = document.querySelector('.aviso')
       var qtdLinhas = linhas.length
+      console.log(linhas)
 
       for (i = 0; i < linhas.length; i++) {
         if (arrayBoolLinhas[i][0] && arrayBoolLinhas[i][1]) {

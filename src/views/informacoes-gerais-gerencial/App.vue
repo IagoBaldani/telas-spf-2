@@ -3,7 +3,7 @@
   <main>
       <section>
         <div class="container-custom">
-          <h2>Informações gerais</h2>
+          <h3 class="fw-bold">Informações gerais</h3>
           <div class="area-btns">
             <a href="/dados-participante-busca">
               <div class="btn-container participante">Participante</div>
