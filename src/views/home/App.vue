@@ -103,6 +103,7 @@ h2 {
   text-align: center;
   border-radius: 20px;
   transition: all linear 0.2s;
+  margin: 0px 30px 0px 0px;
 }
 
 .btn-container:hover {

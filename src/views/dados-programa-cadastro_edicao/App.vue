@@ -68,7 +68,7 @@
                             v-model="modelTurma"
                         />
                     </div>
-                    <div class="erro"> Todos os campos são obrigatórios </div>
+<!--                    <div class="erro"> Todos os campos são obrigatórios </div>-->
                 </div>
                 <div class="col-xl-4"></div>
                 <div class="col-xl-2"></div>
@@ -107,11 +107,11 @@
                         <div class="mt-3">
                             <ul class="fw-bold subtitulo text-start">
                                 Informações gerais:
-                                <li>Nome: {{ programa.nome }}</li>
-                                <li>Início do Programa: {{ programa.inicio }}</li>
-                                <li>Término do Programa: {{ programa.termino }}</li>
-                                <li>Instrutor: {{ programa.coordenador }}</li>
-                                <li>Turma: {{ programa.turma }}</li>
+                                <li>Nome: <span class="titulo"> {{ programa.nome }} </span></li>
+                                <li>Início do Programa: <span class="titulo">{{ programa.inicio }}</span></li>
+                                <li>Término do Programa: <span class="titulo">{{ programa.termino }}</span></li>
+                                <li>Instrutor: <span class="titulo">{{ programa.coordenador }}</span></li>
+                                <li>Turma: <span class="titulo">{{ programa.turma }}</span></li>
                             </ul>
                         </div>
                         <div class="mt-3 modal-footer border-0 justify-content-around">
